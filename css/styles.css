@@ -5,13 +5,14 @@
  */
 
 body {
-  font-family: Lato;
+  font-family: 'PT Sans', sans-serif;
   color: #7B8AC2;
 }
 
 header {
   padding: 154px 0 100px;
-  background-color: #448fe4bf
+  background-color: #448fe4bf;
+  /* background: url('../images/IMG_8105.png'); */
   
 }
 
