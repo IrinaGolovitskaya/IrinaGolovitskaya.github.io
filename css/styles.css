@@ -13,6 +13,7 @@ header {
   padding: 154px 0 100px;
   background-color: #448fe4bf;
   /* background: url('../images/IMG_8105.png'); */
+  font-family: 'PT Sans', sans-serif;
   
 }
 
@@ -29,6 +30,7 @@ a {
 
 .portfolio-item {
   margin-bottom: 30px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .portfolio-item img {
