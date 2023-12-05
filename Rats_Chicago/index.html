@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Title of page</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: #3d3d3d;
+    }
+
+    section {
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      /* The em unit. 2.5x the current size */
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      color: rgb(66, 66, 66);
+      font-size: 1.25em;
+      letter-spacing: .04em;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.8em;
+      letter-spacing: .04em;
+    }
+
+    a {
+      color: #005daa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0
+    }
+
+    #map {
+      width: 100%;
+      margin: 0px auto;
+
+    }
+
+    .max-image-width {
+      width: 100%;
+    }
+
+
+    .linkbox {
+      margin: 3px 0 20px 0;
+      display: block;
+      font-weight: 300;
+    }
+
+    hr {
+      border: 0px;
+      border-bottom: 1px solid #3d3d3d;
+      padding-top: 20px;
+    }
+
+    /* Use float property to make two-column layout. */
+
+    .first-column {
+      float: left;
+      width: 38%;
+      padding-right: 20px;
+    }
+
+    .column {
+      float: left;
+      width: 58%;
+    }
+
+    /* Clear floats after the columns */
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* When browser is 800px wide or less */
+
+    @media screen and (max-width: 800px) {
+      .first-column,
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Add map to top of page and make it stretch to fill browser window. -->
+ 
+
+  <!-- Create a two column layout for map information. -->
+  <section>
+    <h1>Urban rats in Chicago, IL</h1>
+
+    <!-- <a href='Coffeeshops_open8000px.png' class="linkbox">Full screen version</a>
+
+
+    <img class="max-image-width" src="Coffeeshops_open1200px.png"> -->
+
+    
+    <h2>Authored by: Irina Golovitskaya / Northwest Center, Chicago</h2>
+
+    <div class="row">
+      
+      <!-- First column, the left half -->
+      <div class="first-column">
+        <p>According to the research conducted by the Northwest Center, the major environmental concerns for Belmont Cragin residents were litter and rats (67 and 60 respectively), which shows the urgency and high impact on people’s well-being. Those two problems are complex, closely entwined, and can be considered and addressed together. 
+            Studies show that instead of focusing on rats’ reduction and addressing each complaint individually, a more beneficial approach would be to improve the environment by reducing housing and sanitation issues (German and Latkin 2016, Lee et al 2022). Ultimately, there is a need for more collaboration across municipal jurisdictions and even considering rats in urban planning processes and construction practices.
+            
+            <br>
+            <br>Among issues associated with rats are littering, vacant buildings (Walsh 2014), disinvestment (Murray et al 2021), and neighborhood disorder (German and Latkin 2016). The rental/owned housing ratio gets into play too, as the roles of tenants and landlords in rat eradication is often less clear (Byers et al 2019). 
+            Moreover, exposure to rats is a factor that affects mental health. What is more, even awareness of rats in the neighborhood and the diseases they spread without direct exposure can be a source of anxiety (Lam et al 2018). This factor becomes even more significant in the situation when people have limited resources to support their mental health in disinvested and lower-income areas.
+            The rats' exposure also causes the perceived inability to influence the environment around, another factor affecting the quality of life and mental well-being. “High rat and high trash perceptions were significantly associated with high depressive symptoms” (German and Latkin 2016) as well. 
+            Exposure can also have an indirect effect on mental health, which were especially important during the COVID-19 pandemic and the Chicago stay-at-home order in 2020. 
+        </p>
+    
+      </div>
+      
+      <!-- Second column, the right half -->
+      <div class="column">
+        <!-- Challenge map -->
+        <img class="max-image-width" src="maps/Rats_per_neighborhood_City scale.png">
+        <p class="linkbox">The amount of rats/rodents service requests per square mile across neighborhoods in Chicago </p>
+
+        
+
+      </div>
+    </div>
+
+    <div class="row">
+
+        <!-- Second row, the time map -->
+
+        <div class="first-column">
+            <p>Since the collaboration between all the urban actors including owners, businesses, city agents, and citizens is crucial in handling the rats’ problem, it might be worth looking at the current city’s approach to responding to rats/rodents complaints. 
+                The publicly available 311 Service Requests dataset was filtered to “Rodent baiting/Rat Complaint”. For this map only recording up to 12/31/2020 was used. 
+                Using the dates and times the complaint was created and closed, I calculated how much it took to handle each complaint. In the next step, by creating a spatial join I calculated the average time it took the city services to respond to rat complaints in each neighborhood. 
+                <br>
+                <br>As can be seen from the map, this time is uneven, and the strategy of eliminating rats in Belmont Cragin can start with advocating for better services. 
+                
+            </p>
+        
+          </div>
+
+      <div class="column">
+
+      <!-- The time map -->
+      <img class="max-image-width" src="maps/Hours_Rats_per_neighborhood_City scale.png">
+      <p class="linkbox">The average time taken to resolve the complaint, hours.</p>
+
+    </div>
+  </div>
+
+    <h3>Map details</h3>
+    <p>Data used:
+      <br> <li><a href="https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Point-Map/jgq3-irwk">311 Service Requests, City of Chicago.</a></li>
+      <br> <li><a href="https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6">Boundaries, Community Areas, City of Chicago.</a></li>
+      <br> Software used: QGis 3.28, MacOS Monterey.
+      <br> Coordinate system: EPSG: 4326 WGS: 84. </p>
+    <hr>
+    <ul>
+      <li>Visit my Github account <a href='https://github.com/IrinaGolovitskaya'>@IrinaGolovitskaya</a> </li>
+    </ul>
+  </section>
+
+</body>
+</html>
